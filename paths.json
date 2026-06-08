@@ -7,6 +7,6 @@
     "/content/js-repoless.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
   ],
   "includes": [
-    "/content/js-repoless-commerce/"
+    "/content/js-repoless/"
   ]
 }
