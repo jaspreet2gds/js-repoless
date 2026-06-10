@@ -10,7 +10,7 @@ module.exports = defineConfig({
   ...baseConfig,
   env: {
     ...baseConfig.env,
-    graphqlEndPoint: "https://na1-sandbox.api.commerce.adobe.com/LwndYQs37CvkUQk9WEmNkz/graphql",
+    graphqlEndPoint: "https://na1-sandbox.api.commerce.adobe.com/Xun223LbRqWUYemTUEBb8y/graphql",
     giftCardA: "00419VQ5C341",
     productUrlWithOptions:
       "/products/cypress-configurable-product-latest/cypress456?optionsUIDs=Y29uZmlndXJhYmxlLzkzLzEz",
@@ -22,19 +22,19 @@ module.exports = defineConfig({
 
     aemAssetsConfig: {
       commerceConfig: {
-        coreEndpoint: "https://na1-sandbox.api.commerce.adobe.com/QhUjcEq9dMrdCF7h8a4e5g/graphql",
-        endpoint: "https://na1-sandbox.api.commerce.adobe.com/QhUjcEq9dMrdCF7h8a4e5g/graphql",
+        coreEndpoint: "https://na1-sandbox.api.commerce.adobe.com/Xun223LbRqWUYemTUEBb8y/graphql",
+        endpoint: "https://na1-sandbox.api.commerce.adobe.com/Xun223LbRqWUYemTUEBb8y/graphql",
       },
 
       author: {
-        programId: "p150710",
-        environmentId: "e1553109",
+        programId: "p153424",
+        environmentId: "e1601690",
         isStage: false,
       },
 
       credentials: {
         xPublicApiKey: "",
-        magentoEnvironmentId: "",
+        magentoEnvironmentId: "Xun223LbRqWUYemTUEBb8y",
       },
 
       user: {
