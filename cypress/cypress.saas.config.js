@@ -1,9 +1,24 @@
 const { defineConfig } = require("cypress");
 const baseConfig = require("./cypress.base.config");
 
+const parseJsonEnv = (value, fallback = {}) => {
+  if (!value || !value.trim()) {
+    return fallback;
+  }
+
+  try {
+    return JSON.parse(value);
+  } catch (error) {
+    throw new Error(
+      `AEM_ASSETS_PRIVATE_USER is not valid JSON: ${error.message}`
+    );
+  }
+};
+
 // A private user used with AEM Assets testing suite.
-const AEM_ASSETS_PRIVATE_USER = JSON.parse(
-  process.env.AEM_ASSETS_PRIVATE_USER ?? "{}"
+const AEM_ASSETS_PRIVATE_USER = parseJsonEnv(
+  process.env.AEM_ASSETS_PRIVATE_USER,
+  {}
 );
 
 module.exports = defineConfig({
@@ -43,10 +58,6 @@ module.exports = defineConfig({
         returnedOrder: "000000002",
       },
 
-      // For PREX we need a custom recommendation unit id.
-      // Because AEM Assets uses a different Commerce instance
-      // the hardcoded one in the default content source will not work.
-      // To test PREX, we will render a custom draft page with our own recommendation unit id.
       prexDraft: "/drafts/decepticons/products/saas/adb125",
     },
   },
