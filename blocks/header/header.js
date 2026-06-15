@@ -490,7 +490,7 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  console.log('AEM TEST');
+
 
   navWrapper.addEventListener('mouseout', (e) => {
     if (isDesktop.matches && !nav.contains(e.relatedTarget)) {
