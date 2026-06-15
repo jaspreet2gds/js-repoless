@@ -5,7 +5,7 @@ jobs:
     # If you want this job to run on your fork, remove the below "if" line.
     # You will need to "fix" the tests as they are specific to Adobe Commmerce's
     # demo backend.
-    if: github.repository == 'hlxsites/aem-boilerplate-commerce'
+    if: github.repository == 'jaspreet2gds/js-repoless'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -14,7 +14,7 @@ jobs:
       - name: Install adobe aem cli dependencies
         run: npm install -g @adobe/aem-cli
       - name: Start server in the background
-        run: aem up --url https://main--boilerplate-accs--adobe-commerce.aem.live/ &
+        run: aem up --url https://js-dev--js-repoless-dev--jaspreet2gds.aem.page/ &
       - name: Install Cypress and run tests
         uses: cypress-io/github-action@v6
         with:
